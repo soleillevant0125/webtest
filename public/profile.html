@@ -1,0 +1,48 @@
+<!-- 在 profile.html 中展示个人信息 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>个人信息</h1>
+
+        <!-- 添加登录、注册、个人信息和退出登录按钮 -->
+        <div id="user-buttons">
+            <a id="login-button" style="display: none;" href="/login">登录</a>
+            <a id="register-button" style="display: none;" href="/register">注册</a>
+            <a id="profile-button" href="/profile">个人信息</a>
+            <a id="logout-button" href="/logout">退出登录</a>
+        </div>
+	<div id="back-buttons">
+            <a id="forum-button" href="/forum">返回首页</a>
+        </div>
+    </header>
+
+    <section id="content">
+        <!-- 个人信息内容部分 -->
+        <p>这里是用户的个人信息...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 论坛网站</p>
+    </footer>
+
+    <script>
+        // 检查登录状态
+        const isLoggedIn = /* 根据实际情况获取登录状态 */;
+
+        // 根据登录状态显示相应按钮
+        document.getElementById('login-button').style.display = isLoggedIn ? 'none' : 'block';
+        document.getElementById('register-button').style.display = isLoggedIn ? 'none' : 'block';
+        document.getElementById('profile-button').style.display = isLoggedIn ? 'block' : 'none';
+        document.getElementById('logout-button').style.display = isLoggedIn ? 'block' : 'none';
+    </script>
+
+</body>
+</html>

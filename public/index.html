@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论坛首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <header>
+        <h1>论坛首页</h1>
+
+        <!-- 添加注册登录和个人信息按钮 -->
+        <div id="user-buttons">
+	    <a id="register-button" href="/register.html">注册</a>
+            <a id="login-button" href="/login.html">登录</a>
+            <a id="profile-button" style="display: none;" href="/profile">个人信息</a>
+            <a id="logout-button" style="display: none;" href="/logout">退出登录</a>
+        </div>
+    </header>
+
+    <section id="content">
+        <!-- 论坛内容部分 -->
+        <p>这里是论坛的内容...</p>
+    </section>
+
+
+
+    <script>
+        // 检查用户登录状态
+        function checkLoginStatus() {
+            // 在这里可以添加具体的检查逻辑，例如检查用户是否已登录
+            const isLoggedIn = /* 根据实际情况获取用户登录状态 */;
+
+            // 根据登录状态显示相应按钮
+            document.getElementById('login-button').style.display = isLoggedIn ? 'none' : 'block';
+            document.getElementById('profile-button').style.display = isLoggedIn ? 'block' : 'none';
+            document.getElementById('logout-button').style.display = isLoggedIn ? 'block' : 'none';
+        }
+
+        // 在页面加载时检查登录状态
+        document.addEventListener('DOMContentLoaded', checkLoginStatus);
+    </script>
+
+
+
+
+
+
+
+    <header>
+        <h1>欢迎来到论坛</h1>
+    </header>
+
+    <section id="latest-posts">
+        <h2>最新帖子</h2>
+        <ul>
+            <!-- 最新帖子将通过服务器端动态生成 -->
+        </ul>
+    </section>
+
+    <section id="popular-posts">
+        <h2>热门帖子</h2>
+        <ul>
+            <!-- 热门帖子将通过服务器端动态生成 -->
+        </ul>
+    </section>
+
+    <section id="forum-categories">
+        <h2>论坛板块</h2>
+        <ul>
+            <li><a href="/forum?category=technology">技术讨论</a></li>
+            <li><a href="/forum?category=entertainment">娱乐八卦</a></li>
+            <!-- 添加更多板块链接 -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 论坛网站</p>
+    </footer>
+
+</body>
+</html>

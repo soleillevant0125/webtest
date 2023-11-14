@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, section, footer {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#latest-posts-list, #popular-posts-list {
+    padding: 0;
+}
+
+#latest-posts-list li, #popular-posts-list li {
+    margin-bottom: 10px;
+}
+
+#forum-categories ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#forum-categories li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+#post-list {
+    margin-top: 20px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#post-content {
+    margin-top: 20px;
+}

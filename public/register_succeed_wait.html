@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册成功</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 添加样式用于遮罩层 */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            display: none; /* 初始状态隐藏 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 添加一个遮罩层 -->
+    <div class="overlay" id="overlay">
+        <p>正在跳转，请稍候...</p>
+        <button onclick="skipWait()">点击任意处跳过</button>
+    </div>
+
+    <header>
+        <h1>注册成功</h1>
+    </header>
+
+    <!-- 页面加载时启动计时器 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 显示遮罩层
+            document.getElementById('overlay').style.display = 'flex';
+
+            // 设置定时器，10秒后执行自动跳转
+            setTimeout(function () {
+                window.location.href = '/login'; // 将 '/target' 替换为你要跳转的目标页面
+            }, 10000);
+        });
+
+        // 跳过等待
+        function skipWait() {
+            window.location.href = '/login'; // 将 '/target' 替换为你要跳转的目标页面
+        }
+    </script>
+
+</body>
+</html>
